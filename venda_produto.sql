@@ -75,4 +75,4 @@ as
 		Mensagem 156, Nível 15, Estado 1, Procedimento addItem2, Linha 26
         Sintaxe incorreta próxima à palavra-chave 'else'.
 	
-		COMO QUE EU FAÇO PARA LOCALIZAR OS CODIGOS POSTADOS POR V.EXCELÊNCIA
+		COMO QUE EU FAÇO PARA LOCALIZAR OS CODIGOS POSTADOS POR V.EXCELÊNCIA E TAMBEM AS RESPOSTAS
