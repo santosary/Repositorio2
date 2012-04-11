@@ -44,12 +44,15 @@ inserirOferta 'comutador', '10/05/2012 13:00:00', 50
 select * from ofertas
 
 -----procedimento para efetuar lances ------------
+
 create procedure efetuarLances (@usuario int, @oferta int, @valor float)
-as
+as	
 	if ((select qtLances from usuarios where codigo = @usuario) > 0)
 		begin
+			begin tran
 			if ((select data from ofertas where codigo = @oferta) < GETDATE())
-				begin 
+			begin
+				
 					declare @temp float
 					set @temp = (select valorLance 
 								 from lances with (holdlock) 
@@ -87,6 +90,6 @@ as
 		begin
 			select 'você não tem saldo para novos lances'
 		end
+		
 efetuarLances 1, 1, 0.01
 select * from lances
-drop procedure efetuarLances
